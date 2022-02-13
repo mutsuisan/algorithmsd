@@ -1,3 +1,3 @@
 module github.com/mutsuisan/algorithmsd
 
-go 1.12
+go 1.17
