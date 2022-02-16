@@ -5,7 +5,7 @@ import (
 	"github.com/mutsuisan/algorithmsd/structures"
 )
 
-func main() {
+func hashTable() {
 	hash := structures.Init(7)
 	fmt.Println(hash.GetValues())
 	err := hash.Insert("foobar")
@@ -17,13 +17,19 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println(hash.GetValues())
 	err = hash.Insert("hoge")
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println(hash.GetValues())
 	err = hash.Delete("hoge")
 	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println(hash.GetValues())
+}
+
+func main() {
+	hashTable()
 }
