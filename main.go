@@ -2,11 +2,17 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/mutsuisan/algorithmsd/structures"
 )
 
+func binarySearchTree() *structures.BinarySearchTree {
+	bTree := structures.InitBinarySearchTree(7)
+	return bTree
+}
+
 func hashTable() {
-	hash := structures.Init(7)
+	hash := structures.InitHashTable(7)
 	fmt.Println(hash.GetValues())
 	err := hash.Insert("foobar")
 	fmt.Println(hash.GetValues())
