@@ -24,7 +24,7 @@ func hash(value string, size int) int {
 }
 
 // HashTable を指定した size で作成し初期化して返す
-func Init(size int) *HashTable {
+func InitHashTable(size int) *HashTable {
 	hashTable := &HashTable{values: make([]*bucket, size)}
 
 	for i := 0; i < size; i++ {
