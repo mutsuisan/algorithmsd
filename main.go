@@ -7,8 +7,13 @@ import (
 )
 
 func binarySearchTree() *structures.BinarySearchTree {
-	bTree := structures.InitBinarySearchTree(7)
-	return bTree
+	bTree := *structures.InitBinarySearchTree(7)
+	tests := [7]int{5, 10, 1, 3, 5, 8, 11}
+	for _, v := range tests {
+		bTree.Insert(v)
+	}
+	bTree.PrintValuesDesc()
+	return &bTree
 }
 
 func hashTable() {
@@ -38,4 +43,5 @@ func hashTable() {
 
 func main() {
 	hashTable()
+	binarySearchTree()
 }
